@@ -31,9 +31,6 @@ Blog-Site/
 ├── script.js              # JavaScript for dynamic features
 ````
 
-View Live:
-Blog Website Live: (https://github.com/Amarnath-coder405/Blog-Website/index.html)
-
 Run Locally:
 
 ```bash
