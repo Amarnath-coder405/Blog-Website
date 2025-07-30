@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- header section -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="script.js"></script>
+  <title>My Blog</title>
+  <header class="site-header">
+		<div class="slider-container">
+		  <img src="https://picsum.photos/seed/picsum/200/300" class="slide active" id="slide1">
+		  <img src="https://picsum.photos/seed/picsum/200/300" class="slide" id="slide2">
+		  <img src="https://picsum.photos/seed/picsum/200/300" class="slide" id="slide3">
+		  <div class="main-dots">
+		    <span class="main-dot active" onclick="showSlide(1)"></span>
+		    <span class="main-dot" onclick="showSlide(2)"></span>
+		    <span class="main-dot" onclick="showSlide(3)"></span>
+		  </div>
+		</div>
+	</header>
+</head>
+<body>	
+	<!-- Navigation menu starts here -->
+	<div class="navbar">
+		<div class="logo">MyBlog</div>
+		<div class="nav-links">
+		  <a href="#">Home</a>
+		  <div class="dropdown">
+		    <button class="dropbtn">Posts 
+		      <i class="fa fa-caret-down"></i>
+		    </button>
+		    <div class="dropdown-content">
+		      <li><a href="/posts/all">All Posts</a></li>
+		      <li><a href="/posts/new">Create New</a></li>
+		      <li><a href="/posts/drafts">Drafts</a></li>
+    		</div>
+  		</div> 
+		  <div class="dropdown">
+		    <button class="dropbtn">Categories 
+		      <i class="fa fa-caret-down"></i>
+		    </button>
+		    <div class="dropdown-content">
+		      <li><a href="/web-development">Web Development</a></li>
+		      <li><a href="/ui-ux-design">UI/UX Design</a></li>
+		      <li><a href="/cloud-devops">Cloud & DevOps</a></li>
+		      <li><a href="/branding">Career & Branding</a></li>
+		      <li><a href="/tools-workflows">Tools & Workflows</a></li>
+    		</div>
+  		</div> 
+		  <a href="#">About</a>
+		  <a href="#">Contact</a>
+		</div>
+		<div class="search-box">
+		  <input type="text" placeholder="Search...">
+		  <span class="search-icon">🔍</span>
+		</div>
+	</div>
+	<!-- Navigation menu ends here -->
+	<!-- main section -->
+	<div class="row">
+	  <div class="leftcolumn">
+	    <div class="comment-container">
+		      <h2>Lorem Ipsum is that it has a more-or-less normal distribution of letters</h2>
+		      <h5>Title description, Dec 7, 2017</h5>
+		      <div class="sampleimg"><img src="https://picsum.photos/seed/picsum/200/300"></div>
+	      	<p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	      	<div class="social-share">
+				  		<p>Share this post:</p>
+				  		<a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+				  		<a href="https://x.com/login?" class="fab fa-twitter"></a>
+				  		<a href="https://www.linkedin.com/signup/" class="fab fa-linkedin"></a>
+				  		<a href="https://www.instagram.com/accounts/emailsignup/" class="fab fa-instagram"></a>
+					</div>
+				  <div class="comment-box">
+				    <h2>Leave a Comment</h2>
+				    <div class="comment-form">
+				      <input type="text" id="name" placeholder="Your Name">
+				      <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+				      <button onclick="addComment()">Post Comment</button>
+				    </div>
+				    <div class="comment-list" id="commentList">
+				      <!-- Comments will appear here -->
+				    </div>
+			  	</div>
+	    </div>
+	    <div class="comment-container">
+	      <h2>Lorem Ipsum is that it has a more-or-less normal distribution of letters</h2>	
+	      <h5>Title description, Sep 2, 2017</h5>
+	      <div class="sampleimg"><img src="https://picsum.photos/seed/picsum/200/300" width="100%" height="100%" padding=10%></div>
+	      <p> simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	      <div class="social-share">
+				  		<p>Share this post:</p>
+				  		<a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+				  		<a href="https://x.com/login?" class="fab fa-twitter"></a>
+				  		<a href="https://www.linkedin.com/signup/" class="fab fa-linkedin"></a>
+				  		<a href="https://www.instagram.com/accounts/emailsignup/" class="fab fa-instagram"></a>
+				</div>
+				<div class="comment-box">
+			    <h2>Leave a Comment</h2>
+			    <div class="comment-form">
+			      <input type="text" id="name" placeholder="Your Name">
+			      <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+			      <button onclick="addComment()">Post Comment</button>
+			    </div>
+			    <div class="comment-list" id="commentList">
+			      <!-- Comments will appear here -->
+			    </div>
+			  </div>
+	    </div>
+	    <div class="comment-container">
+	      <h2>Lorem Ipsum is that it has a more-or-less normal distribution of letters</h2>	
+	      <h5>Title description, Sep 2, 2017</h5>
+	      <div class="sampleimg"><img src="https://picsum.photos/seed/picsum/200/300" width="100%" height="100%" padding=10%></div>
+	      <p> simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	      <div class="social-share">
+				  		<p>Share this post:</p>
+				  		<a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+				  		<a href="https://x.com/login?" class="fab fa-twitter"></a>
+				  		<a href="https://www.linkedin.com/signup/" class="fab fa-linkedin"></a>
+				  		<a href="https://www.instagram.com/accounts/emailsignup/" class="fab fa-instagram"></a>
+				</div>
+				<div class="comment-box">
+			    <h2>Leave a Comment</h2>
+			    <div class="comment-form">
+			      <input type="text" id="name" placeholder="Your Name">
+			      <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+			      <button onclick="addComment()">Post Comment</button>
+			    </div>
+			    <div class="comment-list" id="commentList">
+			      <!-- Comments will appear here -->
+			    </div>
+			  </div>
+	    </div>
+	  </div>
+	  <div class="rightcolumn">
+	    <div class="card">
+	      <h2>About Me</h2>
+	      <div class="circle-img"><img src="https://picsum.photos/seed/picsum/200/300"></div>
+	      <h2 class="text-2xl font-bold text-gray-800 mb-2">Hi, I'm Abc</h2>
+	      <p> simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        <br><br>
+        simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+	    </div>
+	    <div class="card">
+	      <h3>Popular Post</h3>
+	      <div class="post-card">
+			    <a href="post-detail.html">
+			      <img src="https://picsum.photos/seed/picsum/200/300" alt="Popular Post Image">
+			    </a>
+			    <div class="post-content">
+			      <h3>Lorem Ipsum is that it has a more-or-less normal distribution of letters</h3>
+			      <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			    </div>
+			  </div>
+			</div><br>
+      <div class="card">
+	      <h3>Popular Post</h3>
+	      <div class="post-card">
+			    <a href="post-detail.html">
+			      <img src="https://picsum.photos/seed/picsum/200/300" alt="Popular Post Image"></a>
+			    <div class="post-content">
+			      <h3>Lorem Ipsum is that it has a more-or-less normal distribution of letters</h3>
+			      <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			    </div>
+			  </div>
+			</div><br>
+	      <div class="card">
+		      <h3>Popular Post</h3>
+		      <div class="post-card">
+				    <a href="post-detail.html">
+				      <img src="https://picsum.photos/seed/picsum/200/300" alt="Popular Post Image">
+				    </a>
+				    <div class="post-content">
+				      <h3>Lorem Ipsum is that it has a more-or-less normal distribution of letters</h3>
+				      <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				    </div>
+				  </div>
+				</div>
+	    </div><br><br>
+	  </div>
+	</div>
+</body>
+<div class="nav-container">
+  <a href="page1.html" class="nav-btn">Previous</a>
+  <span class="nav-btn current-page">Page 2</span>
+  <a href="page3.html" class="nav-btn">Next ›</a>
+</div>
+<!-- footer section -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>Made with by <strong>Abc</strong></p>
+    <p>Full-Stack Developer • Hyderabad, India</p>
+    <div class="footer-links">
+      <a href="mailto:abc@example.com">Email</a>
+      <a href="https://github.com/abc-profile" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/abc-profile" target="_blank">LinkedIn</a>
+    </div>
+    <p class="copyright">© 2025 All rights reserved.</p>
+  </div>
+</footer>
+</html>
+
