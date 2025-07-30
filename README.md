@@ -38,7 +38,7 @@ Run Locally:
 
 ```bash
 git clone https://github.com/Amarnath-coder405/Blog-Website.git
-cd Blog-Site
+cd Blog-Website
 open index.html in your browser
 ````
 
